@@ -1,5 +1,6 @@
 ## Imersão ReactJS Alura 
 
+![testflix](public/testflix.gif)
 
 <br>
 <h2>ℹ️ How To access</h2>
