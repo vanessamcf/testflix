@@ -3,56 +3,39 @@ import { Link } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
 
 function CadastroCategoria() {
-  const initialValues = {
-    name: '',
-    description: '',
-    color: '',
+  const valoresIniciais = {
+    nome: '',
+    descricao: '',
+    cor: '',
   };
 
+  const { handleChange, values, clearForm } = useForm(valoresIniciais);
+
   const [categorias, setCategorias] = useState([]);
-  const [values, setValues] = useState(initialValues);
-
-  function setValue(name, value) {
-    setValues({
-      ...values,
-      [name]: value,
-    });
-  }
-
-  function handleChange(e) {
-    // const { getAttribute, value } = e.target;
-    // setValue(
-    //   getAttribute('name'),
-    //   value
-    // );
-    setValue(
-      e.target.getAttribute('name'),
-      e.target.value,
-    );
-  }
 
   useEffect(() => { // o que quer que aconteça
-    console.log('Teste');
-    const URL = 'http://localhost:8080/categorias';
-
-    fetch(URL) // fetch retorna uma Promise
-      .then(async (response) => {
-        const answer = await response.json();
+    const URL_TOP = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://vamdc-testflix.herokuapp.com/categorias';
+    fetch(URL_TOP) // fetch retorna uma Promise
+      .then(async (respostaDoServidor) => {
+        const resposta = await respostaDoServidor.json();
         setCategorias([
-          ...answer,
+          ...resposta,
         ]);
       });
-  }, []);// quando quer que aconteça (array vazio quer que aconteça só 1 vez quando começar)
+  }, []); // quando quer que aconteça (array vazio quer que aconteça só 1 vez quando começar)
 
   return (
     <PageDefault>
       <h1>
         Cadastro de Categoria:
-        {' '}
-        {values.name}
+        {values.nome}
       </h1>
+
       <form onSubmit={function handleSubmit(e) {
         e.preventDefault(); // nao faz reload da pagina
         setCategorias([
@@ -60,49 +43,55 @@ function CadastroCategoria() {
           values, // incluir nova categoria
         ]);
 
-        setValues(initialValues);
+        clearForm();
       }}
       >
+
         <FormField
           label="Nome da Categoria"
-          type="text"
-          name="name"
-          value={values.name}
+          name="nome"
+          value={values.nome}
           onChange={handleChange}
         />
+
         <FormField
           label="Descrição"
           type="textarea"
-          name="description"
-          value={values.description}
+          name="descricao"
+          value={values.descricao}
           onChange={handleChange}
         />
 
         <FormField
           label="Cor"
           type="color"
-          name="color"
-          value={values.color}
+          name="cor"
+          value={values.cor}
           onChange={handleChange}
         />
 
-        <Button>Cadastrar</Button>
+        <Button>
+          Cadastrar
+        </Button>
       </form>
 
       {categorias.length === 0 && (
         <div>
+          {/* Cargando... */}
           Loading...
         </div>
       )}
+
       <ul>
         {categorias.map((categoria) => (
-          <li key={`${categoria.name}`}>
-            {categoria.name}
+          <li key={`${categoria.titulo}`}>
+            {categoria.titulo}
           </li>
         ))}
       </ul>
+
       <Link to="/">
-        Ir para Home
+        Ir para home
       </Link>
     </PageDefault>
   );

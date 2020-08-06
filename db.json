@@ -1,16 +1,264 @@
 {
   "categorias": [
     {
-      "id": 1, 
-      "name": "Front End",
-      "description": "Uma categoria show",
-      "color":"#cbd1ff"  
+      "id": 1,
+      "titulo": "Viagens",
+      "cor": "#ff6a00",
+      "link_extra": {
+        "url": "https://www.youtube.com/channel/UCk6RUGsfWI-3kPrDlMUfvfQ"
+      }
     },
     {
-      "id": 2, 
-      "name": "Backend End",
-      "description": "A melhor categoria",
-      "color":"#cbd1ff"  
-    }  
-  ]   
+      "id": 5,
+      "titulo": "Investimentos",
+      "cor": "red",
+      "link_extra": {
+        "url": "https://www.youtube.com/watch?v=2aDySEqiy0o"
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Carreira de TI",
+      "cor": "orange"
+    },
+    {
+      "id": 6,
+      "titulo": "Front End",
+      "cor": "#6BD1FF",
+      "link_extra": {
+        "text": "Tudo sobre Front End",
+        "url": "https://www.youtube.com/watch?v=TWy2rxyZLrE"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Back End",
+      "cor": "#00C86F",
+      "link_extra": {
+        "text": "Tudo sobre Back End",
+        "url": "https://www.youtube.com/watch?v=DmgiRK-yZ_A"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Cotidiano",
+      "cor": "#9cd33b",
+      "link_extra": {
+        "url": "https://www.youtube.com/watch?v=Kyf1CCfGO3U"
+      }
+    }
+  ],
+  "videos": [
+    {
+      "id": 50,
+      "categoriaId": 1,
+      "titulo": "Trabalhar e Viajar",
+      "description": "Trabalho e Viagem de Motorhome na Espanha",
+      "url": "https://www.youtube.com/watch?v=kv3Lf0I1VQ8"
+    },
+    {
+      "titulo": "Trabalhos que te pagam para viajar",
+      "url": "https://www.youtube.com/watch?v=_MvcgHGCC7c",
+      "categoriaId": 1,
+      "id": 51
+    },
+    {
+      "titulo": "Como sair do Brasil e morar em Portugal",
+      "url": "https://www.youtube.com/watch?v=rDjW5Grfhi0&t=9s",
+      "categoriaId": 1,
+      "id": 52
+    },
+    {
+      "titulo": "Piscina de luxo infinita na montanha",
+      "url": "https://www.youtube.com/watch?v=IVH9OiKr0Kg",
+      "categoriaId": 1,
+      "id": 53
+    },
+    {
+      "titulo": "Ponte para o céu, tente não ter medo de altura",
+      "url": "https://www.youtube.com/watch?v=DdHFZSkm244",
+      "categoriaId": 1,
+      "id": 54
+    },
+    {
+      "titulo": "Passo a passo para começar a investir",
+      "url": "https://www.youtube.com/watch?v=PtAkxzMhobQ",
+      "categoriaId": 5,
+      "id": 55
+    },
+    {
+      "titulo": "6 piores investimentos de 2020",
+      "url": "https://www.youtube.com/watch?v=vpZBpRiuZCI",
+      "categoriaId": 5,
+      "id": 56
+    },
+    {
+      "titulo": "Comprar ou alugar carro?",
+      "url": "https://www.youtube.com/watch?v=ERMGhxNGg1M",
+      "categoriaId": 5,
+      "id": 57
+    },
+    {
+      "titulo": "Ele não tem nada em Renda fixa",
+      "url": "https://www.youtube.com/watch?v=r_LPbssqg3Y",
+      "categoriaId": 5,
+      "id": 58
+    },
+    {
+      "titulo": "Criando um Bot que lê os comentários do Instagram, com node js.",
+      "url": "https://www.youtube.com/watch?v=zrM7EwUXsYU",
+      "categoriaId": 2,
+      "id": 59
+    },
+    {
+      "titulo": "Programador Junior, o que as empresas esperam que tu saiba",
+      "url": "https://www.youtube.com/watch?v=WPTQ8fZ0aQk&t=5s",
+      "categoriaId": 4,
+      "id": 60
+    },
+    {
+      "titulo": "O que todo programador iniciante precisa saber.",
+      "url": "https://www.youtube.com/watch?v=dokm9sZybDo",
+      "categoriaId": 4,
+      "id": 61
+    },
+    {
+      "titulo": "A Inteligência Artificial que vai SUBSTITUIR os Programadores NÃO É TUDO ISSO! ",
+      "url": "https://www.youtube.com/watch?v=Eegnj0mY8OY",
+      "categoriaId": 4,
+      "id": 62
+    },
+    {
+      "titulo": "Quanto ganha um programador no Canadá?",
+      "url": "https://www.youtube.com/watch?v=lxE30fyuOU8",
+      "categoriaId": 4,
+      "id": 63
+    },
+    {
+      "titulo": "A Day in the Life of a Software Engineer | Python Freelancer",
+      "url": "https://www.youtube.com/watch?v=2QByYtPEGIs",
+      "categoriaId": 4,
+      "id": 64
+    },
+    {
+      "titulo": "Python Tutorial for Beginners",
+      "url": "https://www.youtube.com/watch?v=4F2m91eKmts&t=29337s",
+      "categoriaId": 2,
+      "id": 65
+    },
+    {
+      "titulo": "Carreira Backend: O que estudar?",
+      "url": "https://www.youtube.com/watch?v=DmgiRK-yZ_A",
+      "categoriaId": 4,
+      "id": 66
+    },
+    {
+      "titulo": "Python Django Tutorial - Build a TODO List App for Beginners",
+      "url": "https://www.youtube.com/watch?v=4YDwhpahLvc",
+      "categoriaId": 2,
+      "id": 67
+    },
+    {
+      "titulo": "Frontend Developer Guide 2021",
+      "url": "https://www.youtube.com/watch?v=UgBTKMUxudw",
+      "categoriaId": 6,
+      "id": 68
+    },
+    {
+      "titulo": "Recriando interface do Github com ReactJS",
+      "url": "https://www.youtube.com/watch?v=iLEbGQXsg3k",
+      "categoriaId": 6,
+      "id": 69
+    },
+    {
+      "titulo": "Iniciando com React Native - Rocketseat",
+      "url": "https://www.youtube.com/watch?v=XcU9GEUZTQA",
+      "categoriaId": 6,
+      "id": 70
+    },
+    {
+      "titulo": "FOI UM ERRO? NÃO, FORAM VÁRIOS ",
+      "url": "https://www.youtube.com/watch?v=Kyf1CCfGO3U",
+      "categoriaId": 3,
+      "id": 71
+    },
+    {
+      "titulo": "Comecei a receber propostas de emprego por um simples motivo",
+      "url": "https://www.youtube.com/watch?v=qb8yXWFRROg",
+      "categoriaId": 4,
+      "id": 72
+    },
+    {
+      "titulo": "Investimentos Bilionários",
+      "url": "https://www.youtube.com/watch?v=nHd6nbzf_Qo",
+      "categoriaId": 5,
+      "id": 73
+    },
+    {
+      "titulo": "Nossa primeira viagem de motorhome",
+      "url": "https://www.youtube.com/watch?v=QXBU_rD4XFE",
+      "categoriaId": 1,
+      "id": 74
+    },
+    {
+      "titulo": "E ESSA HISTÓRIA DO TRUMP BANIR O TIK TOK?",
+      "url": "https://www.youtube.com/watch?v=8S0EZdxsWr4",
+      "categoriaId": 3,
+      "id": 75
+    },
+    {
+      "titulo": "6 COISAS MELHORES NO BRASIL DO QUE NA ALEMANHA",
+      "url": "https://www.youtube.com/watch?v=XgiiRs2cRWA",
+      "categoriaId": 3,
+      "id": 76
+    },
+    {
+      "titulo": "UM DIA EM POTSDAM, A CIDADE DOS PALÁCIOS AO LADO DE BERLIM",
+      "url": "https://www.youtube.com/watch?v=e7lOdz0ooDw",
+      "categoriaId": 1,
+      "id": 77
+    },
+    {
+      "titulo": "Como criar e inserir dados em tabelas do mysql",
+      "url": "https://www.youtube.com/watch?v=QgWfHKyT4sE&list=PLzehOqhpwpxiD25V8Nzv8kxfCAiBFxoGw&index=2",
+      "categoriaId": 2,
+      "id": 78
+    },
+    {
+      "titulo": "Trip de Motorhome pelo Canadá",
+      "url": "https://www.youtube.com/watch?v=N7aUO6yla6w",
+      "categoriaId": 1,
+      "id": 79
+    },
+    {
+      "titulo": "A comida e a cultura da Turquia",
+      "url": "https://www.youtube.com/watch?v=_D9oZYp3Wt4",
+      "categoriaId": 3,
+      "id": 80
+    },
+    {
+      "titulo": "Melhor pastel assado",
+      "url": "https://www.youtube.com/watch?v=ZrY_ggm3MqM",
+      "categoriaId": 3,
+      "id": 81
+    },
+    {
+      "titulo": "O que o JavaScript é capaz de fazer?",
+      "url": "https://www.youtube.com/watch?v=Ptbk2af68e8",
+      "categoriaId": 6,
+      "id": 82
+    },
+    {
+      "titulo": "Programamos uma Ferramenta pro Youtube com JavaScript Puro",
+      "url": "https://www.youtube.com/watch?v=ScGwWsoC_-I&t=920s",
+      "categoriaId": 6,
+      "id": 83
+    },
+    {
+      "titulo": "COMO PYTHON AJUDA NOSSA PRODUÇÃO DE VÍDEOS",
+      "url": "https://www.youtube.com/watch?v=eosclmulqqo",
+      "categoriaId": 2,
+      "id": 84
+    }
+  ]
 }
